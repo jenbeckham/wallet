@@ -28,14 +28,22 @@ class Exchange < ActiveRecord::Base
 
   def self.big_expense
     expense = 0
-    name = ""
     self.current_month.select do |e|
       e.debits.to_f > expense
       if e.debits.to_f > expense
         expense = e.debits.to_f
       end
     end
+  end
 
+  def self.biggest_expense
+    expense = 0
+    self.all.select do |e|
+      e.debits.to_f > expense
+      if e.debits.to_f > expense
+        expense = e.debits.to_f
+      end
+    end
   end
 
 

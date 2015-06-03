@@ -22,7 +22,11 @@ class ExchangeTest < ActiveSupport::TestCase
   end
 
   test "current month big expense" do
-    assert_equal 1, Exchange.big_expense.count
+    assert_equal 1, Exchange.big_expense[0].debits
   end
 
+  test "biggest expense ever" do
+    assert_equal 1, Exchange.biggest_expense
+
+  end
 end
