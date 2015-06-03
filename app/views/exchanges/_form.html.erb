@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :description %><br>
-    <%= f.select :description, options_for_select([["withdrawal", 2], ["deposit", 1], ["check",3], ["debit card", 4]])%>
+    <%= f.select :description, options_for_select([["deposit", "deposit"], ["direct deposit", "direct deposit"], [" atm withdrawal", "atm withdrawal"], ["withdrawal", "withdrawal"], ["check", "check"], ["debit card", "debit card"]])%>
   </div>
   <div class="field">
     <%= f.label :payee %><br>
