@@ -5,12 +5,14 @@ one:
   payee: Home Depot
   credits:
   debits: 20.10
+  created_at: "2012-06-03 18:06:14"
 
 two:
   description: deposit
   payee:
   credits: 100
   debits:
+  created_at: "2015-05-03 18:06:14"
 
 three:
   description: deposit
@@ -22,4 +24,11 @@ four:
   description: atm withdrawal
   payee:
   credits:
-  debits: 85
+  debits: 900
+
+five:
+  description: direct deposit
+  payee:
+  credits: 1000
+  debits:
+  created_at: "2015-06-03 18:06:14"

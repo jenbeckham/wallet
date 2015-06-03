@@ -3,7 +3,12 @@
 <h1> Your current balance is</h1>
   <p><%= number_to_currency(@exchanges.balance)%>
 </p>
-<p>Current number of transactions: <%= @exchanges.count%></p>
+<p> Current number of transactions: <%= @exchanges.count%></p>
+<p> Current Month Spending: <%= number_to_currency(@exchanges.current_debits)%>
+<p> Where Most of Your Money Went: <%= @exchanges.big_expense%>
+<p> Number of Current Month Transactions: <%= @exchanges.current_month.count %>
+<p> Last Month Spending: <%= number_to_currency(@exchanges.previous_debits) %>
+<p> Number of Previous Month Transactions: <%= @exchanges.previous_month.count %>
 <p>
 <%= link_to 'Transactions List', exchanges_path %> |
 <%= link_to 'New Transaction', new_exchange_path %>
