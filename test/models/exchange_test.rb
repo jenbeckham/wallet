@@ -14,12 +14,15 @@ class ExchangeTest < ActiveSupport::TestCase
   end
 
   test "current month debits" do
-  ends
-
-  test "previous month debits" do
+    assert_equal 920.1, Exchange.current_debits
   end
 
-  # test "the truth" do
-  #   assert true
-  # end
+  test "previous month debits" do
+    assert_equal 0, Exchange.previous_debits
+  end
+
+  test "current month big expense" do
+    assert_equal 1, Exchange.big_expense.count
+  end
+
 end
