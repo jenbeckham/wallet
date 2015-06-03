@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   resources :exchanges
+  get 'exchanges/home'
+  root 'exchanges#home'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

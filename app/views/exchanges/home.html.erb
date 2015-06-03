@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<h1> Your current balance is</h1>
+  <p><%= number_to_currency(@exchanges.balance)%>
+</p>
+<p>Current number of transactions: <%= @exchanges.count%></p>
+<p>
+<%= link_to 'Transactions List', exchanges_path %> |
+<%= link_to 'New Transaction', new_exchange_path %>
+</p>

@@ -33,7 +33,7 @@ class ExchangesControllerTest < ActionController::TestCase
     get :edit, id: @exchange
     assert_response :success
   end
-
+  
   test "should update exchange" do
     patch :update, id: @exchange, exchange: { credits: @exchange.credits, debits: @exchange.debits, description: @exchange.description, payee: @exchange.payee }
     assert_redirected_to exchange_path(assigns(:exchange))

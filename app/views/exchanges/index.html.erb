@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Exchanges</h1>
+<h1>Your Money!</h1>
+
+<p>Current number of transactions: <%= @exchanges.count%></p>
 
 <table>
   <thead>
@@ -28,6 +30,7 @@
   </tbody>
 </table>
 
+<p> Number of Current Month Transactions: <%= @exchanges.current_month.count %>
 <br>
 
 <%= link_to 'New Exchange', new_exchange_path %>

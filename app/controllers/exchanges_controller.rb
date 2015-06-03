@@ -21,6 +21,13 @@ class ExchangesController < ApplicationController
   def edit
   end
 
+  def home
+    @exchanges = Exchange.all
+    if Exchange.balance < 0
+      flash[:notice] = 'It might be time for a shopaholic meeting. You are negative money.'
+    end
+  end
+
   # POST /exchanges
   # POST /exchanges.json
   def create
