@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  payee: MyString
+  credits: 9.99
+  debits: 9.99
+
+two:
+  description: MyString
+  payee: MyString
+  credits: 9.99
+  debits: 9.99
