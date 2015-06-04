@@ -1,15 +1,16 @@
 <p id="notice"><%= notice %></p>
 
 <h1> Your current balance is</h1>
-  <p><%= number_to_currency(@exchanges.balance)%>
-</p>
+  <div class=balance><%= number_to_currency(@exchanges.balance)%></div>
 <p> Current number of transactions: <%= @exchanges.count%></p>
-<p> Current Month Spending: <%= number_to_currency(@exchanges.current_debits)%>
-<p> Where Most of Your Money Went: <%= @exchanges.big_expense%>
-<p> Number of Current Month Transactions: <%= @exchanges.current_month.count %>
-<p> Last Month Spending: <%= number_to_currency(@exchanges.previous_debits) %>
-<p> Number of Previous Month Transactions: <%= @exchanges.previous_month.count %>
-<p>
-<%= link_to 'Transactions List', exchanges_path %> |
-<%= link_to 'New Transaction', new_exchange_path %>
-</p>
+<div class=current> <br>Current Month Spending</br> <br><%= number_to_currency(@exchanges.current_debits)%></br>
+  <br>Number of Current Month Transactions</br><br><%= @exchanges.current_month.count %></br>
+  <br> Biggest Month Expense Amount</br><br> <%=number_to_currency(@exchanges.big_expense)%></br>
+</div>
+<div class=past> <br>Previous Month Spending</br><br> <%= number_to_currency(@exchanges.previous_debits) %></br>
+  <br>Number of Previous Month Transactions</br></br> <%= @exchanges.previous_month.count %></br>
+</div>
+
+
+<div class=foot><%= link_to 'Transactions List', exchanges_path %> |
+<%= link_to 'New Transaction', new_exchange_path %></div>
